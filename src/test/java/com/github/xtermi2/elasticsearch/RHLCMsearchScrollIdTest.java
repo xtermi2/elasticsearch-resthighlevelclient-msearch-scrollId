@@ -34,6 +34,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.elasticsearch.action.support.WriteRequest.RefreshPolicy.IMMEDIATE;
 import static org.elasticsearch.client.RequestOptions.DEFAULT;
 
+/**
+ * Related github issue at elastic:
+ * https://github.com/elastic/elasticsearch/issues/4227
+ */
 @Testcontainers
 public class RHLCMsearchScrollIdTest {
 

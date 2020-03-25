@@ -1,0 +1,62 @@
+{
+  "query": {
+    "term": {
+      "body": {
+        "value": "easy",
+        "boost": 1.0
+      }
+    }
+  },
+  "analyzer": "english",
+  "analyze_wildcard": true,
+  "default_operator": "AND",
+  "df": "body",
+  "explain": true,
+  "stored_fields": [
+    "user",
+    "body",
+    "title"
+  ],
+  "docvalue_fields": [
+    "user",
+    "body",
+    "title"
+  ],
+  "from": 1,
+  "ignore_unavailable": true,
+  "ignore_throttled": true,
+  "allow_no_indices": true,
+  "expand_wildcards": "all",
+  "lenient": true,
+  "preference": "_local",
+  "q": "*:*",
+  "routing": "user",
+  "scroll": "1m",
+  "size": 11,
+  "sort": "user:asc",
+  "_source": true,
+  "_source_excludes": [
+    "postDate"
+  ],
+  "_source_includes": [
+    "user",
+    "body",
+    "title"
+  ],
+  "terminate_after": 2,
+  "stats": [
+    "merge",
+    "refresh"
+  ],
+  "suggest_field": "body",
+  "suggest_mode": "popular",
+  "suggest_size": 2,
+  "suggest_text": "hello",
+  "timeout": "10s",
+  "track_scores": true,
+  "track_total_hits": true,
+  "allow_partial_search_results": true,
+  "version": true,
+  "seq_no_primary_term": true,
+  "request_cache": true,
+  "batched_reduce_size": 128,

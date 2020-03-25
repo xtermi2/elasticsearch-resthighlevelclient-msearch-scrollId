@@ -8,7 +8,10 @@
     <artifactId>elasticsearch-resthighlevelclient-msearch-scrollId</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <description>Test elasticsearch RestHighLevelClient mseach with ScrollId</description>
+    <description>Test elasticsearch RestHighLevelClient mseach with ScrollId.
+        Related github issue at elastic:
+        https://github.com/elastic/elasticsearch/issues/4227
+    </description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
