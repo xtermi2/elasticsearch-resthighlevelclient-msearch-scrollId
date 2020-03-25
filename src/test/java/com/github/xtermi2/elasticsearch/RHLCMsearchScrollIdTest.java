@@ -20,7 +20,6 @@ import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
@@ -138,7 +137,6 @@ public class RHLCMsearchScrollIdTest {
         }
     }
 
-    @NotNull
     private MultiSearchRequest createMSearchRequest() throws IOException {
         String indexName = generateDummyDocumentsInNewRandomIndex(NUMBER_OF_DOCUMENTS);
         SearchRequest searchRequest = createSearchRequest(SCROLL_PAGE_SIZE, indexName);
@@ -147,7 +145,6 @@ public class RHLCMsearchScrollIdTest {
         return multiSearchRequest;
     }
 
-    @NotNull
     private SearchRequest createSearchRequest(int size, String indexName) {
         SearchRequest searchRequest = new SearchRequest(indexName)
                 .scroll(TimeValue.timeValueSeconds(30));
@@ -158,7 +155,7 @@ public class RHLCMsearchScrollIdTest {
         return searchRequest;
     }
 
-    public String generateDummyDocumentsInNewRandomIndex(int numberOfDocuments) throws IOException {
+    private String generateDummyDocumentsInNewRandomIndex(int numberOfDocuments) throws IOException {
         String indexName = RandomStringUtils.randomAlphabetic(15).toLowerCase();
         BulkRequest bulkRequest = new BulkRequest()
                 .setRefreshPolicy(IMMEDIATE);
