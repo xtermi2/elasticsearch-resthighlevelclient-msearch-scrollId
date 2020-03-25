@@ -43,8 +43,8 @@ public class RHLCMsearchScrollIdTest {
 
     private RestHighLevelClient restHighLevelClient;
     private Client transportClient;
-    private static final int NUMBER_OF_DOCUMENTS = 110;
-    private static final int SCROLL_PAGE_SIZE = 100;
+    private static final int NUMBER_OF_DOCUMENTS = 3;
+    private static final int SCROLL_PAGE_SIZE = 2;
 
     @BeforeEach
     void setUp() throws IOException {
@@ -161,11 +161,7 @@ public class RHLCMsearchScrollIdTest {
         IntStream.range(0, numberOfDocuments)
                 .forEach(i -> bulkRequest.add(new IndexRequest(indexName)
                         .id(String.valueOf(i))
-                        .source(ImmutableMap.of(
-                                "documentNumber", i,
-                                "randomData", RandomStringUtils.random(20)
-                                ),
-                                XContentType.JSON)));
+                        .source(ImmutableMap.of("documentNumber", i), XContentType.JSON)));
         BulkResponse res = restHighLevelClient.bulk(bulkRequest, DEFAULT);
         assertThat(res.hasFailures())
                 .as("generateDummyDocumentsInNewRandomIndex: bulk.hasFailures: %s", res.buildFailureMessage())

@@ -7,6 +7,9 @@
         </Console>
     </Appenders>
     <Loggers>
+        <Logger name="org.elasticsearch.client" level="trace"/>
+        <Logger name="org.elasticsearch.client.sniffer" level="trace"/>
+        <Logger name="org.apache.http" level="debug"/>
         <Root level="info" additivity="false">
             <AppenderRef ref="console"/>
         </Root>
