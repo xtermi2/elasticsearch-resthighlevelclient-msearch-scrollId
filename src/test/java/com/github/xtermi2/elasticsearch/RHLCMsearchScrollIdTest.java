@@ -150,8 +150,7 @@ public class RHLCMsearchScrollIdTest {
                 .scroll(TimeValue.timeValueSeconds(30));
         searchRequest.source()
                 .query(QueryBuilders.matchAllQuery())
-                .size(size)
-                .trackTotalHits(true);
+                .size(size);
         return searchRequest;
     }
 
