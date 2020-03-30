@@ -35,8 +35,9 @@ import static org.elasticsearch.action.support.WriteRequest.RefreshPolicy.IMMEDI
 import static org.elasticsearch.client.RequestOptions.DEFAULT;
 
 /**
- * Related github issue at elastic:
- * https://github.com/elastic/elasticsearch/issues/4227
+ * Related github issues at elastic:
+ * - https://github.com/elastic/elasticsearch/issues/4227
+ * - https://github.com/elastic/elasticsearch/issues/54377
  */
 @Testcontainers
 public class RHLCMsearchScrollIdTest {

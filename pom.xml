@@ -9,8 +9,9 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <description>Test elasticsearch RestHighLevelClient mseach with ScrollId.
-        Related github issue at elastic:
-        https://github.com/elastic/elasticsearch/issues/4227
+        Related github issues at elastic:
+        - https://github.com/elastic/elasticsearch/issues/4227
+        - https://github.com/elastic/elasticsearch/issues/54377
     </description>
 
     <properties>
