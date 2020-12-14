@@ -24,7 +24,7 @@
         <elasticsearch.version>7.10.1</elasticsearch.version>
         <junit-jupiter.version>5.7.0</junit-jupiter.version>
         <assertj.version>3.18.1</assertj.version>
-        <testcontainers.version>1.15.0</testcontainers.version>
+        <testcontainers.version>1.15.1</testcontainers.version>
         <log4j2.version>2.14.0</log4j2.version>
     </properties>
     <dependencies>
